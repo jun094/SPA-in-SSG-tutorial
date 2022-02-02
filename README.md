@@ -1,6 +1,8 @@
 # SPA in SSG
 
-**React + Gatsby + Netlify**
+- **React + Gatsby + Netlify**
+- **EmotionJS**
+- **GraphQL**
 
 <br/>
 
