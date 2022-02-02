@@ -24,4 +24,4 @@
 
 - https://blog.banksalad.com/tech/build-a-website-with-gatsby/
 - https://www.youtube.com/watch?v=CTtoHa1g8I4
-- https://www.inflearn.com/course/gatsby-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8/lecture/75995?tab=curriculum
+- https://jbee.io/etc/intro-new-blog/
