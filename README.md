@@ -1,22 +1,24 @@
 # SPA in SSG
 
-React + Gatsby + Netlify
+**React + Gatsby + Netlify**
 
+<br/>
 
 ### TODO
 
--[] 정적페이지 만들어보기
--[] 마크다운으로 정적페이지 만들어보기
--[] 동적 컴포넌트 만들어보기 (검색 컴포넌트 with Algolia plugin)
--[] 배포하기 (with Netlify)
+- [ ] 정적페이지 만들어보기
+- [ ] 마크다운으로 정적페이지 만들어보기
+- [ ] 동적 컴포넌트 만들어보기 (검색 컴포넌트 with Algolia plugin)
+- [ ] 배포하기 (with Netlify)
 
 <br/>
 
 ### LEVEL UP
 
--[] TS로 개발해보기
--[] 에디터 플러그인 추가해보기
+- [ ] TS로 개발해보기
+- [ ] 에디터 플러그인 추가해보기
 
+<br/>
 
 ### 참고 사이트
 
