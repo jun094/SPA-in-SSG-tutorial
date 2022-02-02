@@ -2,14 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-type PostItemProps = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: string
-  link: string
-}
+import { PostFrontmatterType } from 'types/PostItem.types'
 
 const PostItemWrapper = styled(Link)`
   display: flex;
@@ -86,6 +79,9 @@ const Summary = styled.div`
   font-size: 16px;
   opacity: 0.8;
 `
+type PostItemProps = PostFrontmatterType & {
+  link: string
+}
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
