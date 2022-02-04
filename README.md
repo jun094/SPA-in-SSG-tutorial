@@ -23,6 +23,14 @@
 
 <br/>
 
+### Branch Convetion
+- git flow 사용하기
+- PR 하나 당 chapter 하나로 feature브랜치 따기
+- Squash and Merge로 chapter 하나 당 커밋 메시지 하나만 남기기
+- release브랜치 따서 master로 머지될 시, vercel deploy
+
+<br/>
+
 ### 참고 사이트
 
 - https://blog.banksalad.com/tech/build-a-website-with-gatsby/
