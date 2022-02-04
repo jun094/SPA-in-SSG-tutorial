@@ -8,10 +8,11 @@
 
 ### TODO
 
-- [x] 정적페이지 만들어보기
-- [x] 마크다운으로 정적페이지 만들어보기
-- [ ] 동적 컴포넌트 만들어보기 (검색 컴포넌트 with Algolia plugin)
-- [x] 배포하기 (with Vercel)
+- [x] CH1. 정적페이지 만들어보기
+- [x] CH2. 마크다운으로 정적페이지 만들어보기
+- [x] CH3. 동적 페이지 만들어보기
+- [ ] CH4. 동적 컴포넌트 만들어보기 (검색 컴포넌트 with Algolia plugin)
+- [x] CH5. 배포하기 (with Vercel)
 
 <br/>
 
