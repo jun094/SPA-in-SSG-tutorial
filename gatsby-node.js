@@ -4,13 +4,14 @@
  * See: <https://www.gatsbyjs.com/docs/node-apis/>
  */
 
-// You can delete this file if you're not using it
+// GraphQL에서 fetch 작업하고 싶은 것들을 여기서 정의
 
-const path = require('path');
+const path = require('path')
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Setup Import Alias
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
-  const output = getConfig().output || {};
+  const output = getConfig().output || {}
 
   actions.setWebpackConfig({
     output,
@@ -21,5 +22,16 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
         hooks: path.resolve(__dirname, 'src/hooks'),
       },
     },
-  });
-};
+  })
+}
+
+// Generate a Slug Each Post Data
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode })
+
+    createNodeField({ node, name: 'slug', value: slug })
+  }
+}
