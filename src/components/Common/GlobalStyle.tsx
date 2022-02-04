@@ -9,7 +9,6 @@ const globalStyle = css`
     margin: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
-    background-color: #b4b4b4;
   }
 
   html,
