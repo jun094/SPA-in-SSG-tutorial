@@ -1,10 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 
+import { PostPageItemType } from 'types/PostItem.types'
+
 import PageWrapper from 'components/Common/PageWrapper'
 import PostHead from 'components/Post/PostHead'
-
-import { PostPageItemType } from 'types/PostItem.types'
+import PostContent from 'components/Post/PostContent'
 
 type PostTemplateProps = {
   data: {
@@ -42,6 +43,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
         categories={categories}
         thumbnail={gatsbyImageData}
       />
+      <PostContent html={html} />
     </PageWrapper>
   )
 }

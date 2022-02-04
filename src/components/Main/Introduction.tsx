@@ -6,7 +6,9 @@ import ProfileImage from 'components/Main/ProfileImage'
 
 const Background = styled.div`
   width: 100%;
-  color: #ffffff;
+  color: #262626;
+  background-color: rgb(25 80 139 / 20%);
+  border-bottom: 1px solid rgb(228, 230, 233);
 `
 
 const Wrapper = styled.div`

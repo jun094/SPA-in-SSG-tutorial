@@ -1,15 +1,12 @@
 import React, { FunctionComponent, useMemo } from 'react'
-import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 
-import GlobalStyle from 'components/Common/GlobalStyle'
-import Footer from 'components/Common/Footer'
-
+import PageWrapper from 'components/Common/PageWrapper'
 import Introduction from 'components/Main/Introduction'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
-import PostList from 'components/Main/PostList'
+import PostList from 'components/Post/PostList'
 
 import { PostListItemType } from 'types/PostItem.types'
 
@@ -29,12 +26,6 @@ type IndexPageProps = {
     }
   }
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },
@@ -78,16 +69,14 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   )
 
   return (
-    <Container>
-      <GlobalStyle />
+    <PageWrapper>
       <Introduction profileImage={gatsbyImageData} />
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </Container>
+    </PageWrapper>
   )
 }
 
