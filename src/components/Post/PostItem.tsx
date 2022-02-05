@@ -9,12 +9,12 @@ const PostItemWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 2px #333;
   transition: 0.3s box-shadow;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 2px #fff;
   }
 `
 
@@ -29,6 +29,7 @@ const PostItemContent = styled.div`
   display: flex;
   flex-direction: column;
   padding: 15px;
+  color: white;
 `
 
 const Title = styled.div`
@@ -48,6 +49,7 @@ const Date = styled.div`
   font-size: 14px;
   font-weight: 400;
   opacity: 0.7;
+  color: #999;
 `
 
 const Category = styled.div`
@@ -61,10 +63,10 @@ const CategoryItem = styled.div`
   margin: 2.5px 5px;
   padding: 3px 5px;
   border-radius: 3px;
-  background: black;
+  background: white;
   font-size: 14px;
   font-weight: 700;
-  color: white;
+  color: #007cf0;
 `
 
 const Summary = styled.div`

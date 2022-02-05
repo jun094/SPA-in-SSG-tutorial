@@ -13,9 +13,14 @@ type PostTemplateProps = {
       edges: PostPageItemType[]
     }
   }
+  location: {
+    href: string
+  }
 }
 
+// query를 사용할 수 있는 컴포넌트에서는 기본 propsfh location과 query data 가 포함되어 있다.
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
+  location: { href },
   data: {
     allMarkdownRemark: { edges },
   },
@@ -25,18 +30,25 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       html,
       frontmatter: {
         title,
-        summary, // 나중에 사용할 예정입니다!
+        summary,
         date,
         categories,
         thumbnail: {
           childImageSharp: { gatsbyImageData },
+          publicURL,
         },
       },
     },
   } = edges[0]
 
+  console.log(publicURL)
   return (
-    <PageWrapper>
+    <PageWrapper
+      title={title}
+      description={summary}
+      url={href}
+      image={publicURL}
+    >
       <PostHead
         title={title}
         date={date}
@@ -65,6 +77,7 @@ export const queryMarkdownDataBySlug = graphql`
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }

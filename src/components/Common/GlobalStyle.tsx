@@ -15,6 +15,7 @@ const globalStyle = css`
   body,
   #___gatsby {
     height: 100%;
+    background-color: #111;
   }
 
   a,

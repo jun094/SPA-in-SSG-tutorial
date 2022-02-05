@@ -17,6 +17,7 @@ const PostHeadInfoWrapper = styled.div`
   margin: 0 auto;
   padding: 60px 0;
   color: #ffffff;
+  filter: brightness(1);
 `
 
 const PrevPageIcon = styled.div`
