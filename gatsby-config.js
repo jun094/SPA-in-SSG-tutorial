@@ -1,12 +1,32 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `HolyMoly Tutorial`,
+    description: `HolyMoly의 SSG tutorial입니다.`,
+    author: `holymoly.jun`,
+    siteUrl: 'https://holymoly-ssg.vercel.app',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+
+    //*** [SEO] robots.txt 파일 생성을 위한 플러그인
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', disallow: ['/info'] }],
+      },
+    },
+
+    //*** [SEO] sitemap 생성을 위한 플러그인
+    'gatsby-plugin-sitemap',
+
+    //*** [SEO] 중복페이지 제거를 위한 canonical-url 설정을 위한 플러그인
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://holymoly-ssg.vercel.app',
+        stripQueryString: true,
+      },
+    },
 
     //*** typescript를 위한 플러그인
     {
