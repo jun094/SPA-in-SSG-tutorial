@@ -9,7 +9,7 @@ const FooterWrapper = styled.footer`
   font-size: 15px;
   text-align: center;
   line-height: 1.5;
-  background-color: #19508b;
+  background-color: black;
   color: white;
 `
 

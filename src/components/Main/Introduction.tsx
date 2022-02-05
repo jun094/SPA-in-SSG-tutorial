@@ -6,9 +6,9 @@ import ProfileImage from 'components/Main/ProfileImage'
 
 const Background = styled.div`
   width: 100%;
-  color: #262626;
-  background-color: rgb(25 80 139 / 20%);
-  border-bottom: 1px solid rgb(228, 230, 233);
+  color: white;
+  background-color: black;
+  border-bottom: 1px solid #333;
 `
 
 const Wrapper = styled.div`
@@ -28,14 +28,18 @@ const Wrapper = styled.div`
 `
 
 const SubTitle = styled.div`
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 600;
 `
 
 const Title = styled.div`
   margin-top: 5px;
-  font-size: 35px;
+  font-size: 38px;
   font-weight: 700;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #007cf0, #00dfd8);
 `
 
 type IntroductionProps = {
