@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `HolyMoly Tutorial`,
@@ -6,6 +10,28 @@ module.exports = {
     siteUrl: 'https://holymoly-ssg.vercel.app',
   },
   plugins: [
+    'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: process.env.STRAPI_API_URL || 'http://localhost:1337',
+        accessToken: process.env.STRAPI_TOKEN,
+        singleTypes: [
+          {
+            singularName: 'global',
+            queryParams: {
+              populate: {
+                favicon: '*',
+                defaultSeo: {
+                  populate: '*',
+                },
+              },
+            },
+          },
+        ],
+      },
+    },
+
     `gatsby-plugin-react-helmet`,
 
     //*** [SEO] robots.txt 파일 생성을 위한 플러그인
